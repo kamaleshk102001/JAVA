@@ -5,7 +5,8 @@ public class Students {
     int[]rollno=new int[5];
     int[]marks=new int[5];
     int sum=0;
-
+    String today="";
+    
    /* Students(String[] string){
         string=string;
     }
@@ -18,7 +19,22 @@ public class Students {
         this.marks=marks;
     }
 
+    Students(String[]name){
+        this.name=name;
+    }
+
     
+
+    String attendance(){
+        for(int i=0;i<name.length;i++){
+            today=today+name[i]+" ";
+            //System.out.println(" ");
+        }
+        return today;
+    }
+
+    
+
     int markstotal(){
         for(int i=0;i<marks.length;i++){
             sum=sum+marks[i];
