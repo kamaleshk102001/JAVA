@@ -2,11 +2,14 @@
 public class Employee {
     private double salary;
     private String name;
+    private String date;
 
 
-    Employee(String s,double n){
+    
+    Employee(String s,double n,String j){
         name=s;
         salary=n;
+        date=j;
     }
 
     /*Employee(){
@@ -30,8 +33,19 @@ public class Employee {
         salary=n;
     }
 
+    public String getjoiningdate(){
+        return date;
+    }
+
+    public void setjoiningdate(String t){
+        date=t;
+    }
+
     public void raiseSalary(double percent){
         salary+=salary*percent/100;
     }
     
+    public void displayEmployee(){
+        System.out.println(name+" "+salary+" "+date);
+    }
 }

@@ -1,8 +1,8 @@
 public class Manager extends Employee {
     double bonus;
 
-    Manager(String s,double n,double d){
-        super(s,n);
+    Manager(String s,double n,String j,double d){
+        super(s,n,j);
         bonus=d;
 
         //name=s;
@@ -23,5 +23,9 @@ public class Manager extends Employee {
     //@Override
      public double getSalary(){//method overriding method used again in derived class
         return super.getSalary()+bonus;
+    }
+
+    public void displayEmployee(){
+        System.out.println(super.getName()+" "+getSalary()+" "+super.getjoiningdate()+" "+bonus);
     }
 }
